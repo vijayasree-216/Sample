@@ -5,7 +5,7 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = 'vijayasree_credentials'
         DOCKER_IMAGE_NAME = 'vijayasree216/jenkinsdocker'
         DOCKER_IMAGE_TAG = "latest-${env.BUILD_NUMBER}"
-        DOCKER_CONTAINER_NAME ='mycontainer'
+        DOCKER_CONTAINER_NAME ='mycontainer2'
         GIT_URL = 'https://github.com/vijayasree-216/Sample.git'
     }
     
@@ -51,7 +51,7 @@ pipeline {
         stage('Creating a docker container') {
             steps {
                 script {
-                    sh "docker run --name ${DOCKER_CONTAINER_NAME} -itd 3000:3000 ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
+                    sh "docker run --name ${DOCKER_CONTAINER_NAME} -itd 8080:80 ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG}"
                 }
             }
         } 
