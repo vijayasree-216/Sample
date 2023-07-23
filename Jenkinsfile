@@ -5,7 +5,7 @@ pipeline {
         DOCKER_HUB_CREDENTIALS = 'vijayasree_credentials'
         DOCKER_IMAGE_NAME = 'vijayasree216/jenkinsdocker'
         DOCKER_IMAGE_TAG = "latest-${env.BUILD_NUMBER}"
-        DOCKER_CONTAINER_NAME ='mycontainer2'
+        DOCKER_CONTAINER_NAME ='mycontainer3'
         GIT_URL = 'https://github.com/vijayasree-216/Sample.git'
     }
     
